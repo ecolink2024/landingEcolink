@@ -1,0 +1,1149 @@
+/*copiar esto en todos lados*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: #0000;  
+}
+
+:root{
+    --verde:#60a62e;
+    --verdeoscuro:#457c1e;
+    --verdeclaro: #90d576;
+    --compost: #cbb26f;
+    --ecomagenta:#e30661;
+    --swiper-theme-color: #fff !important;
+
+}
+
+  .consultas{
+    display:flex;
+    position: fixed;
+    justify-content: center;
+    bottom: 3%;
+    right: 2%;
+    z-index: 1000000;
+}
+.consultas a img{
+  width:5em;
+  transition: transform 0.3s ease-in-out ;
+}
+
+.consultas a img:hover{
+  transform: translateY(-15%);
+
+}
+.up a{
+    text-decoration: none;
+    background: #e30661;
+    padding:1em 1.5em;
+    text-align: center;
+    color:#fff;
+    font-size:12pt;
+    border-radius: 0.4em;
+    box-shadow: -5px 5px 40px 0px #0002;
+}
+.up a:hover{
+    background: #c70757;
+}
+
+.up{
+  display:flex;
+  position: fixed;
+  justify-content: center;
+  bottom: 3%;
+  left: 2%;
+  z-index: 1000000;
+  opacity:0;
+  transform: translateY(10%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.up a{
+  text-decoration: none;
+  background: #e1e0e6;
+  padding:.5em 1em;
+  text-align: center;
+  color:#000;
+  font-size:16pt;
+  border-radius: 0.4em;
+}
+.up a:hover{
+  background: #ceced4;
+}
+
+body{
+    font-family: 'inter', sans-serif;
+}
+body p{
+  text-align:justify;
+}
+@media screen and (max-width: 550px){
+  body p{
+      text-align: initial;
+  }
+}
+
+/*TAMAÑO DE LA PANTALLA*/
+.contenidosinfooter{
+  max-width: 1550px;
+  margin: auto;
+}
+
+
+/*nav*/
+ 
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:5em;
+    border-bottom: 0.3px solid #0001;
+    margin: 0 0;
+    padding: 0 2%;
+    width: 100%;
+    margin-bottom: 2em;
+    background-color: #fffd;
+    backdrop-filter: blur(10px);
+    z-index: 70000;
+    transition: 0.4s;
+}
+.logo{
+  margin-top: 0.3em;
+  padding: .5em;
+  width: 9em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.logonombre{
+  width:8.5em;
+  margin-bottom: 0.2em;
+
+}
+.loguitos{
+  width:1.5em;
+  margin:0 0.5em;
+  animation: verdes 1.7s ease-in-out infinite;
+}
+@keyframes verdes{
+  0%{
+    -webkit-transform: rotate(0deg);
+  }
+  100%{
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.nav-links{
+  display:flex;
+  justify-content: space-evenly;
+  width:50em;
+  list-style: none;
+  margin-left:1em; /*cambio*/
+  align-items: center; /*cambio*/
+  text-align: center;
+}
+.nav-links li{
+padding:0.5em 0.5em;
+}
+.nav-links a, .nav-links p{
+  color:#222;
+  text-decoration: none;
+  font-weight: 400;
+  border-radius:0.5em;
+  /*padding:0.5em 0.5em;*/
+  margin-left:0.3em;
+  text-align: center;
+
+}
+li .activelink{
+  font-weight: 600;
+}
+.nav-links a:hover{
+  font-weight: 600;
+}
+
+.burger{
+    display:none;
+    cursor: pointer;
+}
+.burger div{
+    width:27px;
+    height:3px;
+    background: #444;
+    margin: 4px;
+    border-radius: 0.5em;
+}
+.lin1,
+.lin2,
+.lin3{
+  transition: transform 1s 0.1s ease-in-out, opacity 1s 0.1s ease-in-out;
+}
+@media screen and (max-width: 850px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right:0px;
+        height:80vh;
+        top:6em;
+        background-color: #eeedf2;
+        flex-direction: column;
+        align-items: center;
+        margin:auto;
+        width:50%;
+        transform: translateY(-140%);
+        transition: transform 0.5s ease;
+        border-radius: 2.5em;
+        z-index: 1000000000000000000000;
+        margin-right:2.5%;
+        box-shadow: -5px 5px 40px 0px #0001;
+    }
+ 
+
+    .burger{
+        display:block;
+    }
+
+}
+.nav-active{
+    transform: translateY(0%);
+}
+    .lin1-act{
+      transform: rotate(45deg) translateY(350%);
+    }
+    .lin3-act{
+      transform: rotate(-45deg) translateY(-340%)
+    }
+    .lin2-act{
+      opacity:0;
+    }
+
+
+
+/*hero section*/
+.hero{
+    
+    width:90%;
+    margin:0 5%;
+    padding-top: 7em;
+    grid-template-rows: 0.3fr 1fr;
+}
+.textointro{
+    
+    width:95%;
+    margin:0 2.5%;
+
+}
+.textointro h1{
+    font-size:25pt;
+    color: #313131;
+    font-weight: 600;
+    width:85%;
+    line-height: 46px;
+}
+.textointro h1 b{
+    font-weight: 800;
+}
+.textointro h2{
+    font-weight: 600;
+    font-size: 18.3pt;
+    line-height: 30pt;
+    width:80%;
+    transform: translateY(60%);
+    position: relative;
+    z-index: 100;
+}
+.textointro h2 mark{
+    background: var(--verde);
+    color: #fff;
+    padding: .1em .5em;
+}
+
+/*slider*/
+.container {
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 1em;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+  }
+  .slides {
+    display: flex;
+    height: 100%;
+  }
+  .slide {
+    min-width: 100%;
+    position: relative;
+    background: #313131;
+  }
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity:70%;
+  }
+ 
+  .slide-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #next-btn,
+  #prev-btn {
+    cursor: pointer;
+    background: transparent;
+    font-size: 30px;
+    border: none;
+    padding: 20px;
+    color:#fffa;
+  }
+  #next-btn:focus,
+  #prev-btn:focus {
+    outline: none;
+  }
+  .slide-content {
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+  }
+  
+/*adapt hero*/
+@media (max-width: 1000px) {
+    .textointro h1{
+        font-size: 24pt;
+        line-height: 38px;
+    }
+
+}
+
+
+
+@media (max-width: 682px) {
+    .hero{
+        width:100%;
+        margin:0;
+    }
+    .textointro{
+        width:85%;
+        margin:0 7.5%;
+    }
+    .textointro h1{
+        margin-bottom: 0.5em;
+    }
+
+    .textointro h2{
+        height: 30px;
+        transform: translateY(25%);
+    }
+    .container{
+        border-radius: 2em;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
+
+
+
+/*servicios*/
+.servicios{
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+.titulo{
+    font-size: 18.3pt;
+    text-align: center;
+    line-height: 31pt;
+    margin-top: .3em;
+    color: #313131;
+    font-weight: 500;
+    padding: .4em 10%;
+}
+.titulo mark{
+    background: var(--ecomagenta);
+    color: #fff;
+    padding: .1em 1em;
+
+} 
+
+
+
+.servind{
+  width:90%;
+  margin:0.5em 5%;
+  border: 1px solid #0005;
+  border-radius: 1em;
+  padding: 2em 7%;
+  display: flex;
+  flex-direction: column;
+}
+.servindp{
+  margin-bottom:1.5em;
+}
+.servind:hover{
+  background-color: #f5f5f9;
+  border: 1px solid #f5f5f9;
+  cursor: pointer;
+}
+.tituloind{
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  margin-bottom: 1.5em;
+}
+.tituloind .logoind{
+  background-color: #313131;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6.5em;
+  width:6.5em;
+  border-radius: 50%;
+  padding:3em;
+
+}
+.logoind img{
+  width: 3.5em;
+}
+.logoinde img{
+  width: 2.3em;
+}
+.tituloind h4{
+  font-size: 16pt;
+    margin-top: .3em;
+    color: #313131;
+    font-weight: 600;
+}
+.tituloind p{
+  font-size: 13pt;
+    margin-top: .3em;
+    color: #313131;
+    font-weight: 400;
+}
+
+.servgrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+  "unop unop tresp tresp"
+  "nada dosp dosp nadados";
+  gap: 1.5em;
+  height: fit-content;
+}
+#unop{
+  grid-area: unop;
+}
+#dosp{
+  grid-area: dosp;
+}
+#tresp{
+  grid-area: tresp;
+}
+.servgrid2{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "unoe unoe dose dose"
+  "trese trese cuatroe cuatroe"
+  "cincoe cincoe seise seise"
+  "s sietee sietee sg";
+  gap: 1.5em;
+  height: fit-content;
+}
+#unoe{
+  grid-area: unoe;
+}
+#dose{
+  grid-area: dose;
+}
+#trese{
+  grid-area: trese;
+}
+#cuatroe{
+  grid-area: cuatroe;
+}
+#cincoe{
+  grid-area: cincoe;
+}
+#seise{
+  grid-area: seise;
+}
+#sietee{
+  grid-area: sietee;
+}
+.servgrid .conh5{
+  border-radius: 0.5em;
+  width: 100%;
+  font-weight: 600;
+  font-size: 16pt;
+  line-height: 20pt;
+  border: 1px solid var(--ecomagenta);
+  color: #313131;
+  padding: 0.7em;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.servgrid .conh5:hover{
+  background-color: var(--ecomagenta);
+  color: #fff;
+}
+.servgrid .conh5p{
+
+  border: 1px solid var(--verde);
+
+}
+.servgrid .conh5p:hover{
+  background-color: var(--verde);
+  border: 1px solid var(--verde);
+  color: #fff;
+}
+.servgrid h5 i{
+  padding-right: 0.5em
+}
+
+@media screen and (max-width:840px){
+  .servgrid{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+}
+@media screen and (max-width:530px){
+  .tituloind{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+  .tituloind h4{
+    text-align: center;
+  }
+  .tituloind p{
+    text-align: center;
+  }
+}
+@media screen and (max-width:310px){
+  .servgrid .conh5{
+    font-size: 14pt;
+  }
+  .tituloind h4{
+    font-size: 14pt;
+  }
+  .tituloind p{
+    text-align: 11pt;
+  }
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*NOVEDADES*/
+
+.swiper{
+  height: 20em;
+  width:90%;
+  margin:1em 5%;
+  margin-bottom:3em;
+  border-radius: 1em;
+}
+@media screen and (max-width:650px){
+  .swiper{
+    height: 80vh;
+  }
+}
+@media screen and (max-width:380px){
+  .swiper{
+    height: 85vh;
+  }
+}
+.swiper-button-next, .swiper-button-prev{
+  margin:1em;
+}
+
+
+
+
+.noticia{
+  height: inherit;
+  width: inherit;
+  text-decoration: none;
+  color:#fff;
+  font-family: 'inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mark{
+
+  background: #60a62e;
+  padding:0.05em 0.3em;
+}
+
+.text{
+  padding:3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.writer{
+  color:#222;
+  font-size: 12pt;
+  font-family: 'inter', sans-serif;
+  font-weight: 600;
+  background: #fffc;
+  padding:.7em 1.4em;
+  border-radius: .3em;
+}
+.writer:hover{
+
+  background: #fff;
+
+}
+.date{  
+  color:#fffc;
+  font-size: 11pt;
+  font-weight: 300;
+  line-height: 14.5pt;
+  text-shadow: #222 1em 1em 1em 1em 1em;
+}
+.title{
+  margin: 0.5em 0;
+  font-size: 18pt;
+  font-weight: 600;
+  line-height: 27pt;
+}
+.parraf{
+  color:#434343;
+  font-size: 12pt;
+  font-weight: 400;
+  line-height: 17.4pt;
+}
+
+/* noticias imagenes */
+.noticia1{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(https://ecolink.com.ar/iblog/donaciones1.jpg);
+}
+.noticia2{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(https://ecolink.com.ar/iblog/reciclaressolo\ \(1\).jpg);
+}
+.noticia3{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(https://ecolink.com.ar/iblog/gobernanza2.jpg);
+}
+.noticia4{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(https://ecolink.com.ar/iblog/fundacionverde.jpg?30072021);
+}
+.noticia5{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(https://ecolink.com.ar/iblog/plastico-aliado-o-enemigo.jpg);
+}
+.noticia6{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(https://ecolink.com.ar/iblog/gobernanza1.jpg);
+}
+.noticia7{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(https://ecolink.com.ar/iblog/incendios.jpg);
+}
+.noticia8{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(https://ecolink.com.ar/iblog/cooperativarecicord2.jpg);
+}
+.noticia9{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(https://ecolink.com.ar/iblog/COP.jpeg);
+}
+
+.noticia10{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(img/capacitaciones.jpg);
+
+}
+.noticia11{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(https://ecolink.com.ar/iblog/diareciclaje.jpg);
+
+}
+.noticia12{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(https://ecolink.com.ar/iblog/cumbre1.jpg);
+
+}
+.noticia13{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(https://ecolink.com.ar/img/empresasconscientes.jpeg);
+
+}
+.noticia14{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(https://ecolink.com.ar/img/cooperativaloscuadraditos.jpg);
+
+}
+.noticia15{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(iblog/logoeconews.jpg);
+
+}
+.noticia16{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(iblog/sosmundo.jpg);
+
+}
+.noticia17{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(iblog/cierreuno.jpg);
+
+}
+.noticia18{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(https://ecolink.com.ar/iblog/puntoecosquin.jpg);
+
+}
+.noticia19{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(https://ecolink.com.ar/iblog/ecolinkaulasafuera.jpg);
+
+}
+
+.noticia20{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(https://ecolink.com.ar/iblog/aulaguia.jpg);
+
+}
+.noticia21{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(https://ecolink.com.ar/iblog/IARSE.jpeg);
+
+}
+.noticia22{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(https://ecolink.com.ar/nov/cestoexpandido.jpeg);
+
+}
+.noticia23{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(iblog/repensarext.jpg);
+
+}
+.noticia24{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(iblog/ebullicion.jpg);
+
+}
+.noticia29{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(img/compostajenovedad.jpg);
+
+}
+.noticia35{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(https://ecolink.com.ar/iblog/nuevoservicioevento.jpg);
+
+}
+.noticia36{
+  background-image: linear-gradient(#4b4b4b54, #4b4b4b54), url(https://ecolink.com.ar/iblog/paulevento.jpg);
+
+}
+
+
+
+
+
+
+.noticia1:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(https://ecolink.com.ar/iblog/donaciones1.jpg);
+}
+.noticia2:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(https://ecolink.com.ar/iblog/reciclaressolo\ \(1\).jpg);
+}
+.noticia3:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(https://ecolink.com.ar/iblog/gobernanza2.jpg);
+}
+.noticia4:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(https://ecolink.com.ar/iblog/fundacionverde.jpg?30072021);
+}
+.noticia5:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(https://ecolink.com.ar/iblog/plastico-aliado-o-enemigo.jpg);
+}
+.noticia6:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(https://ecolink.com.ar/iblog/gobernanza1.jpg);
+}
+.noticia7:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(https://ecolink.com.ar/iblog/incendios.jpg);
+}
+.noticia8:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(https://ecolink.com.ar/iblog/cooperativarecicord2.jpg);
+}
+.noticia9:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(https://ecolink.com.ar/iblog/COP.jpeg);
+}
+.noticia10:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(img/capacitaciones.jpg);
+}
+.noticia11:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(https://ecolink.com.ar/iblog/diareciclaje.jpg);
+}
+.noticia12:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(https://ecolink.com.ar/iblog/cumbre1.jpg);
+}
+.noticia13:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(https://ecolink.com.ar/img/empresasconscientes.jpeg);
+}
+.noticia14:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(https://ecolink.com.ar/img/cooperativaloscuadraditos.jpg);
+}
+.noticia15:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(iblog/logoeconews.jpg);
+}
+.noticia16:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(iblog/sosmundo.jpg);
+}
+.noticia17:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(iblog/cierreuno.jpg);
+}
+
+.noticia18:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(https://ecolink.com.ar/iblog/puntoecosquin.jpg);
+}
+
+.noticia19:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(https://ecolink.com.ar/iblog/ecolinkaulasafuera.jpg);
+}
+  
+.noticia20:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(https://ecolink.com.ar/iblog/aulaguia.jpg);
+}
+.noticia21:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(https://ecolink.com.ar/iblog/IARSE.jpeg);
+}
+.noticia22:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(https://ecolink.com.ar/nov/cestoexpandido.jpeg);
+}
+.noticia23:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(iblog/repensarext.jpg);
+}
+.noticia24:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(iblog/ebullicion.jpg);
+}
+.noticia29:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(img/compostajenovedad.jpg);
+
+}
+.noticia35:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(https://ecolink.com.ar/iblog/nuevoservicioevento.jpg);
+
+}
+.noticia36:hover{
+  background-image: linear-gradient(#4b4b4b85, #4b4b4b85), url(https://ecolink.com.ar/iblog/paulevento.jpg);
+
+}
+
+/* ecolink en numeros */
+.ennumeros{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 2em;
+    margin-bottom: 1em;
+  }
+  
+
+  .numerouno{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: .3em 3em;
+      width:19em;
+  }
+  .numerosimg{
+    height:16em;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    filter: grayscale(20%);
+    border-radius: 50%;
+    width:16em;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+  /*  opacity:0;*/
+    margin-bottom: 1.5em;
+   /* transform: translateY(10%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;*/
+  }
+  .uno{
+    grid-area:uno;
+    /* background:#90d576aa; */
+    background-image: linear-gradient(#3336, #3336), url(img/capacitaciones.jpg);
+  }
+  .dos{
+    grid-area:dos;
+    /* background:#cbb26faa; */
+    background-image: linear-gradient(#3336, #3336), url(img/botellas\ plasticas.jpg)
+  }
+  .tres{
+    grid-area: tres;
+    background-image: linear-gradient(#3336, #3336), url(img/accionesdesostenibilidad.jpeg);
+    /* background: #87bca0aa; */
+  }
+ 
+  .unoflex{
+    display:flex;
+    height:30vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .unoflex h4{
+    font-size: 28pt;
+    font-weight: 600;
+    color:#fff;
+    height:1.5em;
+    line-height:1.5em;
+    text-align: center;
+
+  }
+  .unotext{
+    opacity:100%;
+   /* transform: translateY(-30%);
+    opacity:0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;*/
+  }
+  .dostext{
+    opacity:100%;
+  /*  transform: translateY(-30%);
+    opacity:0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;*/
+  }
+  .trestext{
+    opacity:100%;
+  /*  transform: translateY(-30%);
+    opacity:0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;*/
+  }
+  .cuatrotext{
+    opacity:100%;
+   /* transform: translateY(-30%);
+    opacity:0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;*/
+  }
+  .numerotexto p{
+    font-size: 13pt;
+    color:#313131;
+    text-align: center;
+    line-height: 26px;
+    font-weight: 500;
+    padding:1em;
+    padding-top:0em;
+    max-width:17em;
+  
+  }
+  
+  /*.numerotexto-aparecer{
+    transform: translateY(0%);
+    opacity: 1;
+  } */
+  .numerotexto p b{
+    font-weight:500;
+  }
+  /* adaptar en numeros */
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+
+
+  /*slider logos*/
+
+.sliderlogos{
+    width:100%;
+    margin:0;
+    height:100%;
+    overflow: hidden;
+    position: relative;
+    margin-top:1em;
+}
+
+#sliderlogosabajo{
+    margin-top:0em;
+    margin-bottom: 5em;
+}
+
+/*contenedor de las imagenes*/
+.slider-tracklogos{
+    display:flex;
+    width: calc(15em*42); /*el tamano de las imagenes + el margen * el doble de los logos*/
+    animation: scrolllogos 37.5s infinite linear;
+}
+#tracklogosabajo{
+    display:flex;
+    width: calc(15em*38); /*el tamano de las imagenes + el margen * el doble de los logos*/
+    animation: scrollabajo 33.93s infinite linear;
+}
+.slidelogos{
+  display: flex;
+  flex-direction: row;
+}
+.slidelogos img{
+    width:12em;
+    margin: 0em 1.5em ;
+    align-self: center;
+    justify-self: center;
+    filter: grayscale(100%) contrast(80%) brightness(120%);
+}
+
+@keyframes scrolllogos{
+    100%{
+        transform: translateX(calc(-15em*21));
+
+    }
+    0%{
+      transform: translateX(0%)
+    }
+}
+
+@keyframes scrollabajo{
+    100%{
+        transform: translateX(calc(-15em*19))
+    }
+    0%{
+        transform: translateX(0);
+    }
+}
+
+.mllogo{
+  padding:2.5em;
+}
+
+
+/*REDES*/
+
+
+footer{
+    background: #eeedf2;
+
+}
+
+#tituloredes{
+    padding-top:1em;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16pt;
+}
+  
+  .gridderedes{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:1em;
+    margin-bottom: 2em;
+   /* opacity:0;
+    transform: translateY(10%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;*/
+  }
+
+  
+  
+  .redeslink img{
+    width:4em;
+    transition: transform 0.3s ease-in-out ;
+    margin:0 2em;
+    border-radius: 50%;
+  }
+  .redeslink img:hover{
+    transform: translateY(-15%);
+  }
+  
+  
+  .derechos{
+      font-weight: 300;
+      background-color: #d0ceda;
+      font-size: 10pt;
+      text-align: center;
+      padding: 1em;
+  }
+  
+  
+  /* ADAPTAR REDES */
+  @media screen and (max-width:650px){
+    .gridderedes{
+        flex-wrap: wrap;
+      }
+      .redeslink img{
+        margin-bottom: 0.5em;
+        width: 3.5em;
+      }
+
+}
+
+  
+
+
+.realistic-marker-highlight{
+  position:relative;
+}
+
+.realistic-marker-highlight:before{
+  content:"";
+  background-color:var(--ecomagenta);
+  width:130%;
+  height:1em;
+  position:absolute;
+  z-index:-1;
+  filter:url(#marker-shape);
+ left:-15%;
+  top:0.05em;
+  padding:0.1em 0em;
+}
+.tituloopcion{
+  font-size: 19pt;
+  text-align: center;
+  line-height: 23pt;
+
+  color: #fff;
+  font-weight: 500;
+  padding: .4em 0;
+}
+
+
+/*MOSTRAR*/
+.mostrar{
+  opacity: 100%;
+  display: block;
+}

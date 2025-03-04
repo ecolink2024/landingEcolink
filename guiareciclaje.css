@@ -1,0 +1,89 @@
+/*copiar esto en todos lados*/
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: #0000;  
+}
+
+:root{
+  --verde:#60a62e;
+  --verdeoscuro:#457c1e;
+  --verdeclaro: #90d576;
+  --compost: #cbb26f;
+  --ecomagenta:#e30661;
+  --ecomagentaoscuro:#b91459;
+}
+
+
+/*TAMAÑO DE LA PANTALLA*/
+body{
+  max-width: 1550px;
+  margin: auto;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5%;
+  margin: 5em 5%;
+}
+.grid h1{
+  font-family: inter;
+  font-size: 70pt;
+  line-height: 65pt;
+  font-weight: 700;
+  color: #e30661;
+}
+.box{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1em;
+  background-image: linear-gradient(#3335, #3335), url(iblog/guia.png);
+
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 2em;
+  text-decoration: none;
+}
+.box h2{
+  font-family: inter;
+  font-size: 20pt;
+  line-height: 65pt;
+  font-weight: 700;
+  color: #fff;
+  background-color: #e30661;
+  padding: 0em 1em;
+  border-radius: 1em;
+}
+.box:hover{
+  background-image: linear-gradient(#3331, #3331), url(iblog/guia.png);
+}
+.box h2:hover{
+background-color: var(--ecomagentaoscuro);
+}
+
+
+
+@media screen and (max-width:970px){
+  
+.grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5%;
+  margin: 5em 5%;
+}
+.grid h1{
+  font-family: inter;
+  font-size: 50pt;
+  line-height: 55pt;
+  font-weight: 700;
+  color: #e30661;
+}
+
+}

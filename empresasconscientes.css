@@ -1,0 +1,766 @@
+/*copiar esto en todos lados*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: #0000;  
+}
+
+
+:root{
+    --verde:#60a62e;
+    --verdeoscuro:#457c1e;
+    --verdeclaro: #90d576;
+    --compost: #cbb26f;
+    --ecomagenta:#e30661;
+    --swiper-theme-color: #60a62e !important;
+
+}
+
+
+
+/*TAMAÑO DE LA PANTALLA*/
+.contenidosinfooter{
+  max-width: 1550px;
+  margin: auto;
+}
+
+
+
+.consultas{
+    display:flex;
+    position: fixed;
+    justify-content: center;
+    bottom: 3%;
+    right: 2%;
+    z-index: 1000000;
+}
+.consultas a img{
+  width:5em;
+  transition: transform 0.3s ease-in-out ;
+}
+
+.consultas a img:hover{
+  transform: translateY(-15%);
+
+}
+.up a{
+    text-decoration: none;
+    background: #e30661;
+    padding:1em 1.5em;
+    text-align: center;
+    color:#fff;
+    font-size:12pt;
+    border-radius: 0.4em;
+    box-shadow: -5px 5px 40px 0px #0002;
+}
+.up a:hover{
+    background: #c70757;
+}
+
+.up{
+  display:flex;
+  position: fixed;
+  justify-content: center;
+  bottom: 3%;
+  left: 2%;
+  z-index: 1000000;
+  opacity:0;
+  transform: translateY(10%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.up a{
+  text-decoration: none;
+  background: #e1e0e6;
+  padding:.5em 1em;
+  text-align: center;
+  color:#000;
+  font-size:16pt;
+  border-radius: 0.4em;
+}
+.up a:hover{
+  background: #ceced4;
+}
+
+body{
+    font-family: 'inter', sans-serif;
+}
+body p{
+  text-align:justify;
+}
+@media screen and (max-width: 550px){
+  body p{
+      text-align: initial;
+  }
+}
+
+
+
+
+/*nav*/
+ 
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:5em;
+    border-bottom: 0.3px solid #0001;
+    margin: 0 0;
+    padding: 0 2%;
+    width: 100%;
+    margin-bottom: 2em;
+    background-color: #fffd;
+    backdrop-filter: blur(10px);
+    z-index: 70000;
+    transition: 0.4s;
+}
+.logo{
+  margin-top: 0.3em;
+  padding: .5em;
+  width: 9em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.logonombre{
+  width:8.5em;
+  margin-bottom: 0.2em;
+
+}
+.loguitos{
+  width:1.5em;
+  margin:0 0.5em;
+  animation: verdes 1.7s ease-in-out infinite;
+}
+@keyframes verdes{
+  0%{
+    -webkit-transform: rotate(0deg);
+  }
+  100%{
+    -webkit-transform: rotate(360deg);
+  }
+}
+/*desde aca*/
+.nav-links{
+    display:flex;
+    justify-content: space-evenly;
+    width:50em;
+    list-style: none;
+    margin-left:1em; /*cambio*/
+    align-items: center; /*cambio*/
+    text-align: center;
+}
+.nav-links li{
+  padding:0.5em 0.5em;
+}
+.nav-links a, .nav-links p{
+    color:#222;
+    text-decoration: none;
+    font-weight: 400;
+    border-radius:0.5em;
+    /*padding:0.5em 0.5em;*/
+    margin-left:0.3em;
+    text-align: center;
+
+}
+li .activelink{
+    font-weight: 600;
+}
+.nav-links a:hover{
+    font-weight: 600;
+}
+
+/*hasta aca*/
+
+
+.burger{
+    display:none;
+    cursor: pointer;
+}
+.burger div{
+    width:27px;
+    height:3px;
+    background: #444;
+    margin: 4px;
+    border-radius: 0.5em;
+}
+.lin1,
+.lin2,
+.lin3{
+  transition: transform 1s 0.1s ease-in-out, opacity 1s 0.1s ease-in-out;
+}
+@media screen and (max-width: 850px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right:0px;
+        height:80vh;
+        top:6em;
+        background-color: #eeedf2;
+        flex-direction: column;
+        align-items: center;
+        margin:auto;
+        width:50%;
+        transform: translateY(-140%);
+        transition: transform 0.5s ease;
+        border-radius: 2.5em;
+        z-index: 1000000000000000000000;
+        margin-right:2.5%;
+        box-shadow: -5px 5px 40px 0px #0001;
+    }
+ 
+
+    .burger{
+        display:block;
+    }
+
+}
+.nav-active{
+    transform: translateY(0%);
+}
+    .lin1-act{
+      transform: rotate(45deg) translateY(350%);
+    }
+    .lin3-act{
+      transform: rotate(-45deg) translateY(-340%)
+    }
+    .lin2-act{
+      opacity:0;
+    }
+
+
+
+
+    .hero{
+        width:90%;
+        margin:0 5%;
+        padding-top: 7em;
+  
+  
+    }
+    .hero h1{
+      font-size:25pt;
+      color: #313131;
+      font-weight: 600;
+      width:85%;
+      text-align: center;
+      margin:0 7.5%;
+      margin-bottom: 1em;
+      line-height: 46px;
+  }
+  .hero h1 b{
+      font-weight: 800;
+  }
+  
+  .iniciocontainer{
+    display:grid;
+    gap:2em;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .preguntas{
+    padding:2em;
+    border: 1px solid var(--verde);
+    border-radius: 1em;
+    height:fit-content;
+  }
+  .bulb{
+    width: 1.5em;
+    fill:var(--verde);
+    margin-right:0.5em
+  }
+  .titulos{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero h2{
+    font-weight: 600;
+    font-size: 19pt;
+    line-height: 33pt;
+    text-align: center;
+  }
+  
+  .hero h2 mark{
+    background: var(--verde);
+    width:100%;
+    color: #fff;
+    padding: .1em .5em;
+  }
+  
+  .hero p{
+    font-size: 13pt;
+    color: #313131 ;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 1em 0;
+  }
+  
+  
+  
+  
+  .hero ul{
+    font-size: 13pt;
+    color: #313131 ;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0em 2em;
+  }
+  .hero ul li{
+    margin: 1em 0;
+  }
+  
+  .imagencon{
+    position: absolute;
+    width: 12em;
+    right: 5.1%;
+    animation: logoempresas 1.5s  alternate infinite;
+  }
+  @keyframes logoempresas{
+    0%{
+      -webkit-transform:scale(100%) rotate(25deg);
+   
+  
+    }
+    100%{
+      -webkit-transform: scale(90%) rotate(25deg);
+    
+  
+    }
+  }
+  .segundapreguntacon{
+    display:flex;
+    flex-direction: column;
+  }
+  .linksumate{
+    color: #fff;
+    font-size: 14pt;
+      background: var(--verde);
+      font-weight: 600;
+      padding: 0.8em 1.2em;
+      margin: 1em auto;
+      border-radius: 0.2em;
+      text-decoration: none;
+      display: inline-flex;
+      transition: all 0.3s;
+  }
+  .linksumate:hover {
+    background: var(--verdeoscuro);
+    transform: translateY(-1em);
+  }
+  
+  @media screen and (max-width:1260px){
+    .imagencon{
+  
+      transform: translateY(30%) rotate(25deg);
+    }
+  
+  }
+  
+  @media screen and (max-width:1048px){
+    .titulos{
+      justify-content: start;
+  
+    }
+    .hero h2{
+      text-align: start ;
+    }
+  
+  }
+  
+  @media screen and (max-width:780px){
+    .iniciocontainer{
+  
+      grid-template-columns: 1fr;
+    }
+    .titulos{
+      justify-content: center;
+  
+    }
+    .hero h2{
+      text-align: center;
+    }
+    .imagencon{
+  
+      display:none;
+      
+    }
+  
+  }
+  @media screen and (min-width:1550px){
+    .imagencon{
+      right: auto;
+    }
+  
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.swiper {
+    width: 100%;
+    margin-top:1em;
+    margin-bottom:1em;
+    height: auto;
+  }
+
+
+.swiper-button-next, .swiper-button-prev {
+    opacity:50%;
+    color: var(--swiper-navigation-color,var(--swiper-theme-color));
+    padding:2em;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: scale(90%);
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    opacity:100%;
+}
+
+.swiper-pagination{
+    transform: translateY(70%);
+}
+/*portada*/
+.portada{
+    background-color: var(--verde);
+    width:90%;
+    margin:1em 5%;
+    border-radius:1em;
+    padding:4em 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.portada h3{
+    font-size: 20pt;
+    margin: 1em 0;
+    text-align: center;
+}
+.lampara{
+    width: 6em;
+}
+.portada p{
+    margin: .5em 0;
+}
+.desliza{
+    width:3em;
+}
+
+/*EMPRESAS*/
+.lasempresasconscientes{
+    margin: 2em 0;
+  }
+  
+  .empresas{
+    width:90%;
+    margin:1em 5%;
+    border: 1.5px solid #0002;
+    border-radius:1em;
+  
+    padding:2em;
+  }
+  .bienvenido{
+    
+    display:flex;
+    justify-content:left;
+    align-items: center;
+  
+  }
+  .bienvenido img{
+    height:40pt;
+    margin-left: 0.5em;
+    object-fit: scale-down;
+  }
+  
+  .textoeimagenes .imgsantex{
+  
+    margin: 1em 5%;
+    display:flex;
+    justify-content: center;
+    gap:3em;
+    padding:1em;
+    flex-wrap: wrap;
+  }
+  .textoeimagenes{
+    display:grid;
+    grid-template-columns: auto 19em;
+    align-items: center;
+  }
+  .textoeimagenes p{
+    font-size: 13pt;
+    color: #313131 ;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 1em;
+  
+  }
+  .textoeimagenes .imgsantex img{
+    height: 14em;
+    filter: brightness(80%) opacity(95%);
+    width:14em;
+    border-radius:50%;
+    object-fit: cover;
+  
+  }
+  #consuman{
+    height: 7em;
+    width:12em;
+  }
+  #cervetti{
+    height: 6em;
+    width:11em;
+  }
+  #craftech{
+    height: 7em;
+    width:12em;
+  }
+  #bs360{
+    height: 7em;
+    width:11.5em;
+  }
+  #cabono{
+    height: 7em;
+    width:11.5em;
+  }
+  #santex{
+    height: 6em;
+    width:11em;
+  }
+  #bros{
+    height: 12em;
+    width:11em;
+  }
+  #ck1, #ck2{
+    height: 12em;
+    width:12em;
+    margin-right:1em;
+  }
+
+  #risata{
+    height: 12em;
+    width:12em;
+  }
+  #intive{
+    height: 10em;
+    width:11em;
+  }
+  #woxi{
+    height: 10em;
+    width:12em;
+    filter: grayscale(100%);
+  }
+  #fms{
+    height: 10em;
+    width:12em;
+    filter: grayscale(30%);
+  }
+  #heybon{
+    height: 6em;
+    width:12em;
+    filter: grayscale(100%);
+  }
+  #wedo{
+    height: 9em;
+    width:11em;
+    filter: grayscale(100%);
+  }
+  
+  #icc{
+    height: 8em;
+    width:14em;
+  }
+  
+  #encode{
+    height: 8em;
+    width:14em;
+    filter: grayscale(30%);
+  }
+  #ceg{
+    height: 9em;
+    width:17em;
+    filter: grayscale(10%);
+  }
+ #nobis{
+  height: 6em;
+  width:9.5em;
+ }
+ #alpogo{
+  height: 6em;
+  width:13em;
+ }
+  #ledureau{
+    height: 8em;
+    width:13em;
+    margin-left:1em;
+  }
+  #ml{
+    height: 7em;
+    width:7em;
+ 
+  }
+  @media screen and (max-width:780px){
+    .textoeimagenes{
+      display:flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  
+  }
+  @media screen and (max-width:540px){
+    .bienvenido{
+      display:flex;
+      flex-wrap: wrap;
+    }
+  .empresas{
+    padding:1em;
+  }
+  .textoeimagenes p{
+    font-size: 12pt;
+    line-height: 26px;
+  }
+  .textoeimagenes .imgsantex img {
+    display: none;
+  }
+  .textotitu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #ledureau{
+
+    margin-left:0;
+  }
+  .swiper-pagination{
+    transform: translateY(-70%);
+}
+.swiper-button-next, .swiper-button-prev {
+  transform: scale(60%);
+}
+  }
+  @media screen and (max-width:518px){
+    #ck1, #ck2{
+        height: 6em;
+        width:11em;
+        margin-right:1em;
+      }
+  }
+
+
+
+
+/*boton*/
+.contact{
+  display: flex;
+  justify-content: center;
+}
+.linksumate2{
+  color: var(--verde);
+  font-size: 14pt;
+    border: 1px solid var(--verde);
+    font-weight: 600;
+    padding: 0.8em 2em;
+    border-radius: 0.2em;
+    text-decoration: none;
+    transition: all 0.3s
+}
+.linksumate2:hover {
+  color:var(--verdeoscuro);
+
+}
+
+
+
+
+
+
+/*footer*/
+/*REDES*/
+
+
+footer{
+    margin-top:5em;
+      background: #eeedf2;
+  
+  }
+  
+  #tituloredes{
+      padding-top:1em;
+      display: flex;
+      justify-content: center;
+      font-weight: 500;
+      font-size: 16pt;
+  }
+    
+    .gridderedes{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      margin:1em;
+      margin-bottom: 2em;
+     /* opacity:0;
+      transform: translateY(10%);
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;*/
+    }
+  
+    
+    
+    .redeslink img{
+      width:4em;
+      transition: transform 0.3s ease-in-out ;
+      margin:0 2em;
+      border-radius: 50%;
+    }
+    .redeslink img:hover{
+      transform: translateY(-15%);
+    }
+    
+    
+    .derechos{
+        font-weight: 300;
+        background-color: #d0ceda;
+        font-size: 10pt;
+        text-align: center;
+        padding: 1em;
+    }
+    
+    
+    /* ADAPTAR REDES */
+    @media screen and (max-width:650px){
+      .gridderedes{
+          flex-wrap: wrap;
+        }
+        .redeslink img{
+          margin-bottom: 0.5em;
+          width: 3.5em;
+        }
+  
+  }

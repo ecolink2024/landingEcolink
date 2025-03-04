@@ -1,0 +1,389 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: #0000;  
+}
+
+:root{
+    --verde:#60a62e;
+    --verdeoscuro:#457c1e;
+    --verdeclaro: #90d576;
+    --compost: #cbb26f;
+    --ecomagenta:#e30661;
+    --swiper-theme-color: #fff !important;
+
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+body p{
+  text-align:justify;
+}
+@media screen and (max-width: 600px){
+  body p{
+      text-align: initial;
+  }
+}
+/*logo*/
+
+.logoecolink{
+    display: flex;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+.logoecolink:hover{
+    transform: translateY(-10%);
+    
+}
+
+.logo{
+    margin-left:0.5em;
+    padding: 0.5em;
+    width: 8em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   filter: brightness(100%);
+  }
+  .logonombre{
+    width:7em;
+    margin-bottom: 0.2em;
+  
+  }
+  .loguitos{
+    width:1.235em;
+    margin:0 0.5em;
+    animation: verdes 1.7s ease-in-out infinite;
+  }
+  @keyframes verdes{
+    0%{
+      -webkit-transform: rotate(0deg);
+    }
+    100%{
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+
+
+/*hero*/
+.hero{
+    background-color: var(--ecomagenta);
+  
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding: 2em 5%;
+    padding-bottom: 4em;
+    color:#fff;
+}
+.parrafo{
+    font-weight: 400;
+    font-size: 12.5pt;
+    line-height: 26px;
+    margin: 1em 0;
+}
+/*.parrafo a{
+    color: #60a62e;
+}
+.parrafo a:hover{
+    color: #457c1e;
+} */
+
+.meses{
+    font-weight: 400;
+    font-size: 12.5pt;
+    margin-bottom:2em;
+    text-align: center;
+}
+.hero h1{
+    font-weight: 600;
+    font-size: 35pt;
+}
+.subtitulos{
+    font-weight: 600;
+    font-size: 21pt;
+    margin-bottom: 1em;
+}
+.intro .subtitulos{
+    font-size: 23pt;
+}
+.contenthero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1em;
+    margin:1em 5%;
+    align-items: center;
+    justify-items: center;
+}
+.iconos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.intro .subtitulos{
+    text-align: center;
+}
+
+
+/*repaso 2023*/
+.sub1{
+    font-size: 18pt;
+    display: flex;
+}
+.sub1 i{
+
+    font-size: 22pt;
+}
+.textoano{
+    color: #fff;
+   font-size: 14em;
+   line-height: 0.65em;
+   position:absolute;
+   object-fit: cover;
+   top:1.48em;
+   right: 0.6em;
+   border-radius: 1em;
+   text-shadow: 0.05em 0.05em 0.1em rgba(126, 86, 107, 0.151);
+}
+.textoano b{
+    color: #ff006a;
+}
+
+.verde{
+    color: var(--verde);
+}
+.primeraseccion{
+margin:2em 10%;
+display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.3em;
+}
+.contenedores{
+    max-width: 900px;
+    padding-bottom: 2.3em;
+    border-bottom: 3px solid #0002;
+}
+
+
+.imagenes2023{
+    display: flex;
+    margin:0.5em ;
+    margin-top:1.5em;
+    justify-content: center;
+    gap: 2.5em;
+    flex-wrap: wrap;
+}
+
+.imagenes2023 img{
+    width:17em;
+    object-fit: scale-down;
+    border-radius: 0.3em;
+    box-shadow: 1px 1px 40px 5px rgba(34, 36, 44, 0.116);
+}
+
+/*adaptar hero y seccionuno*/
+@media (max-width: 1060px) {
+    .textoaño{
+       font-size: 12em;
+       top:1.9em;
+       right: 0.5em;
+    }
+}
+@media (max-width: 880px) {
+    .contenthero{
+       display: flex;
+       flex-direction: column;
+        gap:1em;
+        margin:0 5%;
+    }
+    .textoano{
+        font-size: 12em;
+        top:-0.7em;
+        right: 0;
+        margin: auto;
+
+        margin-bottom: -0.6em;
+        position: relative;
+     }
+     .textoanocontain{
+        display: flex;
+        align-items: center;
+     }
+     .sub1{
+        text-align: center;
+        display: block;
+    }
+}
+@media (max-width: 500px) {
+
+     .sub1{
+        font-size: 14pt;
+    }
+    .sub1 i{
+        font-size: 16pt;
+    }
+}
+@media (max-width: 370px) {
+
+    .sub1{
+       font-size: 13pt;
+   }
+   .sub1 i{
+       font-size: 16pt;
+   }
+}
+@media (max-width: 329px) {
+
+    .sub1{
+       font-size: 12pt;
+   }
+   .sub1 i{
+       font-size: 15pt;
+   }
+   .textoano{
+    font-size: 10em;
+    top:-0.7em;
+    right: 0;
+    margin: auto;
+
+    margin-bottom: -0.6em;
+    position: relative;
+ }
+ .imagenes2023 img{
+    width:13em;
+}
+}
+
+/*boton*/
+.botonin:hover {
+    color: #fff;
+    background-color: var(--verde);
+}
+.botonin {
+    font-size: 13pt;
+    color: #313131;
+    font-weight: 400;
+    line-height: 1.8;
+    padding: 0.6em 01em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.3em;
+    border: solid 1px var(--verde);
+    transition: all 0.1s;
+}
+
+
+
+/*Lista*/
+
+.lista{
+    font-size: 12.5pt;
+    font-weight: 400;
+    line-height: 27px;
+    margin: 0em 2em;
+    text-align: justify;
+}
+.lista li{
+    margin: 1em 0;
+}
+@media screen and (max-width: 600px){
+    .lista{
+        text-align: initial;
+        margin:0;
+    }
+  }
+
+
+.rosa{
+    color: var(--ecomagenta);
+}
+
+
+
+
+
+
+/*REDES*/
+
+
+footer{
+    background: var(--ecomagenta);
+    color: #fff;
+
+}
+
+#tituloredes{
+    padding-top:1em;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16pt;
+
+}
+  
+  .gridderedes{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:1em;
+    margin-bottom: 2em;
+   /* opacity:0;
+    transform: translateY(10%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;*/
+  }
+
+  
+  
+  .redeslink img{
+    width:4em;
+    transition: transform 0.3s ease-in-out ;
+    margin:0 2em;
+    border-radius: 50%;
+  }
+  .redeslink img:hover{
+    transform: translateY(-15%);
+  }
+  
+  
+  .derechos{
+    margin: 0 5%;
+      font-weight: 300;
+      border-top: 3px solid #fff;
+      font-size: 10pt;
+      text-align: center;
+      padding: 1em;
+      padding-bottom: 2em;
+  }
+
+  
+  /* ADAPTAR REDES */
+  @media screen and (max-width:650px){
+    .gridderedes{
+        flex-wrap: wrap;
+      }
+      .redeslink img{
+        margin-bottom: 0.5em;
+        width: 3.5em;
+      }
+
+}
+
+
+
+.divisorverde{
+    overflow: hidden;
+
+    transform: translateY(10%);
+}
+.divisorrosa{
+    overflow: hidden;
+    margin-top: -0.01em;
+
+}

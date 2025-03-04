@@ -1,0 +1,816 @@
+/*copiar esto en todos lados*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: #0000;  
+}
+
+:root{
+    --verde:#60a62e;
+    --verdeoscuro:#457c1e;
+    --verdeclaro: #90d576;
+    --compost: #cbb26f;
+    --ecomagenta:#e30661;
+    --ecomagentaoscuro:#b91459;
+}
+
+  .consultas{
+    display:flex;
+    position: fixed;
+    justify-content: center;
+    bottom: 3%;
+    right: 2%;
+    z-index: 1000000;
+}
+.consultas a img{
+  width:5em;
+  transition: transform 0.3s ease-in-out ;
+}
+
+.consultas a img:hover{
+  transform: translateY(-15%);
+
+}
+.up a{
+    text-decoration: none;
+    background: #e30661;
+    padding:1em 1.5em;
+    text-align: center;
+    color:#fff;
+    font-size:12pt;
+    border-radius: 0.4em;
+    box-shadow: -5px 5px 40px 0px #0002;
+}
+.up a:hover{
+    background: #c70757;
+}
+
+.up{
+  display:flex;
+  position: fixed;
+  justify-content: center;
+  bottom: 3%;
+  left: 2%;
+  z-index: 1000000;
+  opacity:0;
+  transform: translateY(10%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.up a{
+  text-decoration: none;
+  background: #e1e0e6;
+  padding:.5em 1em;
+  text-align: center;
+  color:#000;
+  font-size:16pt;
+  border-radius: 0.4em;
+}
+.up a:hover{
+  background: #ceced4;
+}
+
+body{
+    font-family: 'inter', sans-serif;
+}
+body p{
+    text-align:justify;
+}
+@media screen and (max-width: 550px){
+    body p{
+        text-align: initial;
+    }
+}
+
+
+/*TAMAÑO DE LA PANTALLA*/
+.contenidosinfooter{
+    max-width: 1550px;
+    margin: auto;
+  }
+
+
+
+
+/*nav*/
+ 
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:5em;
+    border-bottom: 0.3px solid #0001;
+    margin: 0 0;
+    padding: 0 2%;
+    width: 100%;
+    margin-bottom: 2em;
+    background-color: #fffd;
+    backdrop-filter: blur(10px);
+    z-index: 70000;
+    transition: 0.4s;
+}
+
+
+.logo{
+    margin-top: 0.3em;
+    padding: .5em;
+    width: 9em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .logonombre{
+    width:8.5em;
+    margin-bottom: 0.2em;
+  
+  }
+  .loguitos{
+    width:1.5em;
+    margin:0 0.5em;
+    animation: verdes 1.7s ease-in-out infinite;
+  }
+  @keyframes verdes{
+    0%{
+      -webkit-transform: rotate(0deg);
+    }
+    100%{
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+
+  .nav-links{
+    display:flex;
+    justify-content: space-evenly;
+    width:50em;
+    list-style: none;
+    margin-left:1em; /*cambio*/
+    align-items: center; /*cambio*/
+    text-align: center;
+}
+.nav-links li{
+  padding:0.5em 0.5em;
+}
+.nav-links a, .nav-links p{
+    color:#222;
+    text-decoration: none;
+    font-weight: 400;
+    border-radius:0.5em;
+    /*padding:0.5em 0.5em;*/
+    margin-left:0.3em;
+    text-align: center;
+
+}
+li .activelink{
+    font-weight: 600;
+}
+.nav-links a:hover{
+    font-weight: 600;
+}
+
+.burger{
+    display:none;
+    cursor: pointer;
+}
+.burger div{
+    width:27px;
+    height:3px;
+    background: #444;
+    margin: 4px;
+    border-radius: 0.5em;
+}
+.lin1,
+.lin2,
+.lin3{
+  transition: transform 1s 0.1s ease-in-out, opacity 1s 0.1s ease-in-out;
+}
+@media screen and (max-width: 850px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right:0px;
+        height:80vh;
+        top:6em;
+        background-color: #eeedf2;
+        flex-direction: column;
+        align-items: center;
+        margin:auto;
+        width:50%;
+        transform: translateY(-140%);
+        transition: transform 0.5s ease;
+        border-radius: 2.5em;
+        z-index: 1000000000000000000000;
+        margin-right:2.5%;
+        box-shadow: -5px 5px 40px 0px #0001;
+    }
+ 
+
+    .burger{
+        display:block;
+    }
+
+}
+.nav-active{
+    transform: translateY(0%);
+}
+    .lin1-act{
+      transform: rotate(45deg) translateY(350%);
+    }
+    .lin3-act{
+      transform: rotate(-45deg) translateY(-340%)
+    }
+    .lin2-act{
+      opacity:0;
+    }
+
+
+
+
+
+
+
+
+
+
+/*hero*/
+    .hero{
+        width:90%;
+        margin:0 5%;
+        padding-top: 7em;
+        display: grid;
+        grid-template-columns: 1.4fr 1.2fr;
+        gap:5em;
+
+    }
+
+
+    .tituloserv h1{
+        font-size:25pt;
+        color: #313131;
+        font-weight: 600;
+        width:85%;
+        margin-bottom: 1em;
+        line-height: 46px;
+    }
+    .tituloserv h1 b{
+        font-weight: 800;
+    }
+    
+
+    .intro{
+        font-size:14pt;
+        color: #313131;
+        font-weight: 400;
+        margin: 1em 0;
+        line-height: 30px;
+    }
+    .intro .verde{
+        font-style: normal;
+        color: var(--verde);
+    }
+    .intro .magenta{
+        font-style: normal;
+        color: var(--ecomagenta);
+    }
+    .intro a{
+        text-decoration: none;
+        color: var(--verde);
+        font-weight: 600;
+        
+        transition: transform 0.3s;
+        display: flex;
+     
+    }
+    .intro a:hover{
+        color: var(--verdeoscuro);
+        transform: translateY(-20%);
+    }
+
+    .hero video{
+        width:100%;
+        object-fit: cover;
+        height:100%;
+        margin: 2em 0;
+        margin-left: 1em;
+        border-top-left-radius: 1em;
+        border-bottom-left-radius: 1em;
+        border-radius: 0.5em;
+        filter: brightness(80%) contrast(90%) ;
+    }
+
+    
+    /*adapt hero*/
+    
+    @media screen and (max-width: 950px){
+  
+        .hero{
+
+            grid-template-columns: 1fr;
+            gap:0em;
+    
+        }
+        .hero video{
+            margin: 1em 0;
+
+        }
+    
+    }
+
+    @media screen and (max-width: 650px){
+        .tituloserv{
+            width:80%;
+            margin:0 5%;
+        }
+        .tituloserv h1{
+            margin-left: 5%;
+            margin-bottom: 0;
+        }
+        .hero{
+
+            grid-template-columns: 1fr;
+            gap:0em;
+    
+        }
+        .hero video{
+            display: none;
+
+        }
+    
+    }
+
+
+
+/*servicios*/
+
+.cadauno{
+    padding-top: 2.3em;
+    padding-bottom:2.3em;
+    border-bottom: 3px solid #0002;
+}
+#empresas{
+    margin-bottom:5em;
+    border-bottom: 0;
+}
+
+/*gestion residuos*/
+
+.informacion{
+    margin:1em 5%;
+    margin-top:5em;
+    width:90%;
+}
+
+.introserv{
+    display: grid;
+    grid-template-columns: 20em auto;
+}
+
+.imgserv{
+
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    padding: 1em 5em;
+    height: 100%;
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgserv img{
+    width:6em;
+    filter: brightness(600%);
+}
+/*IMAGENES*/
+#imggestion{
+    background-image: linear-gradient(#3339, #3339), url(img/gestionderesiduos.jpg);
+}
+#imgconsultoria{
+    background-image: linear-gradient(#3335, #3335), url(img/consultoria.jpg);
+}
+
+
+/*FIN IMAGENES*/
+.textointro{
+    width:95%;
+    margin: 0.5em 2.5%;
+}
+.textointro h3{
+    font-weight: 600;
+    font-size: 19pt;
+    line-height: 33pt;
+    width:100%;
+}
+
+.textointro h3 mark{
+    background: var(--verde);
+    width:100%;
+    color: #fff;
+    padding: .1em .5em;
+}
+.textointro h4{
+    font-weight: 600;
+    font-size: 15pt;
+    line-height: 30pt;
+    color: #313131;
+    width:100%;
+}
+.textointro p{
+    font-size: 13pt;
+    color: #313131 ;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 1em 0;
+}
+.textointro p b{
+    font-weight: 600;
+}
+.textointro p a{
+    color: #fff;
+    background: var(--ecomagenta);
+    font-weight: 600;
+    padding: 0.3em 1em;
+    border-radius: 0.2em;
+    text-decoration: none;
+    display: inline-flex;
+    transform: translateX(-3em);
+    transition: all 0.3s;
+}
+.textointro p a:hover{
+    background: var(--ecomagentaoscuro);
+    transform: translateX(-2em);
+}
+#calendario{
+    background-color: #fff5;
+    color:var(--ecomagentaoscuro);
+    margin-bottom:.5em;
+    border: 2px solid var(--ecomagenta);
+}
+
+/*adaptar servcadauno*/
+
+@media screen and (max-width: 960px){
+    .informacion{
+        margin:1em 5%;
+   
+    }
+}
+
+@media screen and (max-width:800px){
+    .introserv{
+        grid-template-rows: 20em auto;
+        grid-template-columns: 1fr;
+    }
+    .textointro p a{
+        display: block;
+        text-align: center;
+        transform: translateX(0em);
+    }
+    .textointro p a:hover{
+        background: var(--ecomagentaoscuro);
+        transform: translateX(0em);
+    }
+ }
+
+
+ @media screen and (max-width: 650px){
+    .informacion{
+        margin-top:0;
+   
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*PARTICULARES BOTONES*/
+.botones{
+    margin-top: 0.5em;
+}
+
+.contgrid{
+    display: grid;
+    grid-template-columns: auto 19em;
+    gap: 5%;
+}
+.imgpart{
+    border-radius: 0.5em;
+    background: #333;
+    height: 100%;
+    width:100%;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+
+/*imagenes de botones*/
+.domicilioimg{
+    background-image: linear-gradient(#3335, #3335), url(img/recolecciondomiciliaria.jpg);
+
+}
+.domiciliocompostimg{
+    background-image: linear-gradient(#3335, #3335), url(https://ecolink.com.ar/img/compostparticulares.jpg);
+
+}
+.puntoimg{
+    background-image: linear-gradient(#3335, #3335), url(img/puntoecolink.jpg);
+}
+.imgempresacon{
+    background-image: linear-gradient(#3335, #3335), url(https://ecolink.com.ar/img/empresasconscientes.jpeg);
+}
+.imghuella{
+    background-image: linear-gradient(#3335, #3335), url(https://ecolink.com.ar/img/huella2.jpeg);
+}
+.imgeventos{
+    background-image: linear-gradient(#3335, #3335), url(https://ecolink.com.ar/iblog/nuevoservicio1.jpg);
+}
+.imgtalleres{
+    background-image: linear-gradient(#3337, #3337), url(https://ecolink.com.ar/img/1645195574757.jpeg);
+}
+.imgcompostable{
+    background-image: linear-gradient(#3337, #3337), url(https://ecolink.com.ar/img/compostaje.jpg);
+}
+.imgreciclajee{
+    background-image: linear-gradient(#3337, #3337), url(https://ecolink.com.ar/img/cooperativadereciclaje.jpg);
+}
+.imgipa{
+    background-image: linear-gradient(#3337, #3337), url(img/cestos.JPG);
+}
+.imgsust{
+    background-image: linear-gradient(#3337, #3337), url(img/relevamiento.JPG);
+}
+
+
+/*ADAPTAR PERSONAS*/
+@media screen and (max-width:900px){
+    .contgrid{
+        grid-template-rows: auto 18em;
+        grid-template-columns: 1fr;
+        gap: 0%;
+    }
+ }
+ 
+
+
+
+
+
+
+
+
+
+/*consultoria*/
+.listaasesoria{
+    font-size: 13pt;
+    color: #313131 ;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0em 2em;
+}
+.listaasesoria li{
+    margin: 0.5em 0;
+}
+
+
+
+
+/*Botones de empresas*/
+.botones{
+  display: flex;
+flex-wrap: wrap;  
+gap: 5%;
+
+}
+.conbot{
+    
+    width: 100%;
+
+}
+.botones h4{
+    font-weight: 600;
+    font-size: 13pt;
+    line-height: 20pt;
+    color: #313131;
+    margin: 0.3em;
+    padding: 0.3em;
+    padding-left: 01em;
+}
+.botones h5{
+    font-weight: 600;
+    font-size: 16pt;
+    line-height: 20pt;
+    margin: 0.3em;
+    padding: 0.3em;
+    padding-left: 01em;
+    cursor: pointer;
+    transition: transform 0.3s;
+    
+}
+.botones h5 i{
+    padding-left: 0.2em;
+}
+
+.marcar{
+    border-radius: 0.5em;
+    background: #f5f5f9;
+    color: var(--ecomagenta);
+    display: flex;
+    width: fit-content;
+    margin: 1em 0em;
+    z-index: 3000;
+    position: relative;
+}
+.marcar:hover{
+    box-shadow: 10px 10px 50px #0002;
+    background: var(--ecomagenta);
+    color: #f5f5f9;
+}
+.botones h5:hover{
+    transform: translateY(-5%);
+
+}
+.servicioe{
+    padding: 2em 3em;
+    margin-top:-1.8em ;
+    border-radius: 0.5em;
+    background: #f5f5f9;
+    margin-bottom: 1em;
+}
+.botones p{
+    font-size: 13pt;
+    color: #112;
+    font-weight: 400;
+    line-height: 30px;
+   
+}
+.botones p b{
+    font-weight: 600;
+}
+.botones ul{
+    font-size: 13pt;
+    color: #112 ;
+    font-weight: 400;
+    line-height: 30px;
+    margin-left: 2em;
+}
+
+
+.botones ul li{
+    margin: 0.2em 0;
+    margin-bottom: 0.8em;
+}
+
+
+
+.botoninfoe:hover{
+    border: 2px solid var(--ecomagentaoscuro);
+    transform: translateY(-1em);
+}
+.botoninfoe{
+    background-color: #fff5;
+    color:var(--ecomagentaoscuro);
+    margin: 1.5em 0em;
+    font-size: 13pt;
+    border: 2px solid var(--ecomagenta);
+    font-weight: 600;
+    padding: 0.8em 1em;
+    border-radius: 0.2em;
+    text-decoration: none;
+    display: inline-flex;
+    transition: all 0.3s;
+}
+
+
+/*ADAPTAR BOTONE*/
+@media screen and (max-width:500px){
+    .servicioe{
+        padding: 1.5em 2.5em;
+
+    }
+    .botones p{
+        font-size: 12pt;
+
+        line-height: 28px;
+       
+    }
+    .botones ul{
+        font-size: 12pt;
+        line-height: 28px;
+        margin-left: 1em;
+    }
+    
+  
+
+}
+
+
+
+
+
+
+
+
+/*REDES*/
+
+
+footer{
+    background: #eeedf2;
+
+}
+
+#tituloredes{
+    padding-top:1em;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16pt;
+}
+  
+  .gridderedes{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:1em;
+    margin-bottom: 2em;
+   /* opacity:0;
+    transform: translateY(10%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;*/
+  }
+
+  
+  
+  .redeslink img{
+    width:4em;
+    transition: transform 0.3s ease-in-out ;
+    margin:0 2em;
+    border-radius: 50%;
+  }
+  .redeslink img:hover{
+    transform: translateY(-15%);
+  }
+  
+  
+  .derechos{
+      font-weight: 300;
+      background-color: #d0ceda;
+      font-size: 10pt;
+      text-align: center;
+      padding: 1em;
+  }
+  
+  
+  /* ADAPTAR REDES */
+  @media screen and (max-width:650px){
+    .gridderedes{
+        flex-wrap: wrap;
+      }
+      .redeslink img{
+        margin-bottom: 0.5em;
+        width: 3.5em;
+      }
+
+}
+
+
+
+
+
+/*clases para javascript*/
+
+.partmenosdos{
+    display:none;
+    opacity: 0;
+}
+.mostrarlogo{
+    opacity: 100%;
+    display: inline-flex;
+}
+.ocultar{
+    display: none !important;
+}
+
+.border{
+    border: 0.3px solid #e30661;
+}
+.mostrar{
+    opacity: 100%;
+    display: grid;
+  
+
+}
+.ancho{
+width:100%
+}

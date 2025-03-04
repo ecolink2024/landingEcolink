@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /iclientes/
+Disallow: /iequipo/
+Disallow: /ipersonas/
+Disallow: /404.html
+
+
+Sitemap: https://ecolink.com.ar/sitemap.xml
