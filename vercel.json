@@ -4,6 +4,11 @@
       "source": "/guiacompostajecolaborativo",
       "destination": "https://drive.google.com/file/d/1RKGw3MM8AXphHe4YlCf16zchCV_UT6GD/view?usp=sharing",
       "permanent": true
-    }
+    },
+    {
+        "source": "/guiareciclaje",
+        "destination": "https://drive.google.com/file/d/16ByhrePRrtr-KNHnXp72JmdLSsmeKMNu/view?usp=sharing",
+        "permanent": true
+      }
   ]
 }
