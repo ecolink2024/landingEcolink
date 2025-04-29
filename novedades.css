@@ -1,108 +1,102 @@
 /*copiar esto en todos lados*/
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  -webkit-tap-highlight-color: #0000;  
+  -webkit-tap-highlight-color: #0000;
 }
 
-:root{
-  --verde:#60a62e;
-  --verdeoscuro:#457c1e;
+:root {
+  --verde: #60a62e;
+  --verdeoscuro: #457c1e;
   --verdeclaro: #90d576;
   --compost: #cbb26f;
-  --ecomagenta:#e30661;
-  --ecomagentaoscuro:#b91459;
+  --ecomagenta: #e30661;
+  --ecomagentaoscuro: #b91459;
 }
 
-
 /*TAMAÑO DE LA PANTALLA*/
-.contenidosinfooter{
+.contenidosinfooter {
   max-width: 1550px;
   margin: auto;
 }
 
-
-.consultas{
-  display:flex;
+.consultas {
+  display: flex;
   position: fixed;
   justify-content: center;
   bottom: 3%;
   right: 2%;
   z-index: 1000000;
 }
-.consultas a img{
-width:5em;
-transition: transform 0.3s ease-in-out ;
+.consultas a img {
+  width: 5em;
+  transition: transform 0.3s ease-in-out;
 }
 
-.consultas a img:hover{
-transform: translateY(-15%);
-
+.consultas a img:hover {
+  transform: translateY(-15%);
 }
-.up a{
+.up a {
   text-decoration: none;
   background: #e30661;
-  padding:1em 1.5em;
+  padding: 1em 1.5em;
   text-align: center;
-  color:#fff;
-  font-size:12pt;
+  color: #fff;
+  font-size: 12pt;
   border-radius: 0.4em;
   box-shadow: -5px 5px 40px 0px #0002;
 }
-.up a:hover{
+.up a:hover {
   background: #c70757;
 }
 
-.up{
-display:flex;
-position: fixed;
-justify-content: center;
-bottom: 3%;
-left: 2%;
-z-index: 1000000;
-opacity:0;
-transform: translateY(10%);
-transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+.up {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  bottom: 3%;
+  left: 2%;
+  z-index: 1000000;
+  opacity: 0;
+  transform: translateY(10%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
-.up a{
-text-decoration: none;
-background: #e1e0e6;
-padding:.5em 1em;
-text-align: center;
-color:#000;
-font-size:16pt;
-border-radius: 0.4em;
+.up a {
+  text-decoration: none;
+  background: #e1e0e6;
+  padding: 0.5em 1em;
+  text-align: center;
+  color: #000;
+  font-size: 16pt;
+  border-radius: 0.4em;
 }
-.up a:hover{
-background: #ceced4;
+.up a:hover {
+  background: #ceced4;
 }
 
-body{
-  font-family: 'inter', sans-serif;
+body {
+  font-family: "inter", sans-serif;
 }
-body p{
-  text-align:justify;
+body p {
+  text-align: justify;
 }
-@media screen and (max-width: 550px){
-  body p{
-      text-align: initial;
+@media screen and (max-width: 550px) {
+  body p {
+    text-align: initial;
   }
 }
 
-
-
-
 /*nav*/
 
-nav{
+nav {
   position: fixed;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height:5em;
+  height: 5em;
   border-bottom: 0.3px solid #0001;
   margin: 0 0;
   padding: 0 2%;
@@ -113,205 +107,192 @@ nav{
   z-index: 70000;
   transition: 0.4s;
 }
-.logo{
+.logo {
   margin-top: 0.3em;
-  padding: .5em;
+  padding: 0.5em;
   width: 9em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   cursor: pointer;
 }
-.logonombre{
-  width:8.5em;
+.logonombre {
+  width: 8.5em;
   margin-bottom: 0.2em;
-
 }
-.loguitos{
-  width:1.5em;
-  margin:0 0.5em;
+.loguitos {
+  width: 1.5em;
+  margin: 0 0.5em;
   animation: verdes 1.7s ease-in-out infinite;
 }
-@keyframes verdes{
-  0%{
+@keyframes verdes {
+  0% {
     -webkit-transform: rotate(0deg);
   }
-  100%{
+  100% {
     -webkit-transform: rotate(360deg);
   }
 }
 
-
-.nav-links{
-  display:flex;
+.nav-links {
+  display: flex;
   justify-content: space-evenly;
-  width:50em;
+  width: 50em;
   list-style: none;
-  margin-left:1em; /*cambio*/
+  margin-left: 1em; /*cambio*/
   align-items: center; /*cambio*/
   text-align: center;
 }
-.nav-links li{
-padding:0.5em 0.5em;
+.nav-links li {
+  padding: 0.5em 0.5em;
 }
-.nav-links a, .nav-links p{
-  color:#222;
+.nav-links a,
+.nav-links p {
+  color: #222;
   text-decoration: none;
   font-weight: 400;
-  border-radius:0.5em;
+  border-radius: 0.5em;
   /*padding:0.5em 0.5em;*/
-  margin-left:0.3em;
+  margin-left: 0.3em;
   text-align: center;
-
 }
-li .activelink{
+li .activelink {
   font-weight: 600;
 }
-.nav-links a:hover{
+.nav-links a:hover {
   font-weight: 600;
 }
 
-.burger{
-  display:none;
+.burger {
+  display: none;
   cursor: pointer;
 }
-.burger div{
-  width:27px;
-  height:3px;
+.burger div {
+  width: 27px;
+  height: 3px;
   background: #444;
   margin: 4px;
   border-radius: 0.5em;
 }
 .lin1,
 .lin2,
-.lin3{
-transition: transform 1s 0.1s ease-in-out, opacity 1s 0.1s ease-in-out;
+.lin3 {
+  transition: transform 1s 0.1s ease-in-out, opacity 1s 0.1s ease-in-out;
 }
-@media screen and (max-width: 850px){
-  body{
-      overflow-x: hidden;
+@media screen and (max-width: 850px) {
+  body {
+    overflow-x: hidden;
   }
-  .nav-links{
-      position: absolute;
-      right:0px;
-      height:80vh;
-      top:6em;
-      background-color: #eeedf2;
-      flex-direction: column;
-      align-items: center;
-      margin:auto;
-      width:50%;
-      transform: translateY(-140%);
-      transition: transform 0.5s ease;
-      border-radius: 2.5em;
-      z-index: 1000000000000000000000;
-      margin-right:2.5%;
-      box-shadow: -5px 5px 40px 0px #0001;
-  }
-
-
-  .burger{
-      display:block;
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 80vh;
+    top: 6em;
+    background-color: #eeedf2;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 50%;
+    transform: translateY(-140%);
+    transition: transform 0.5s ease;
+    border-radius: 2.5em;
+    z-index: 1000000000000000000000;
+    margin-right: 2.5%;
+    box-shadow: -5px 5px 40px 0px #0001;
   }
 
+  .burger {
+    display: block;
+  }
 }
-.nav-active{
+.nav-active {
   transform: translateY(0%);
 }
-  .lin1-act{
-    transform: rotate(45deg) translateY(350%);
-  }
-  .lin3-act{
-    transform: rotate(-45deg) translateY(-340%)
-  }
-  .lin2-act{
-    opacity:0;
-  }
-
-.contenido{
-  padding-top:7em;
-  font-family: 'inter', sans-serif;
+.lin1-act {
+  transform: rotate(45deg) translateY(350%);
+}
+.lin3-act {
+  transform: rotate(-45deg) translateY(-340%);
+}
+.lin2-act {
+  opacity: 0;
 }
 
-
+.contenido {
+  padding-top: 7em;
+  font-family: "inter", sans-serif;
+}
 
 /*TITULO*/
-.titulonovedades{
+.titulonovedades {
   width: 90%;
   margin: 0em 5%;
-  font-size:25pt;
+  font-size: 25pt;
   color: #313131;
   font-weight: 700;
-  text-align:center;
+  text-align: center;
   margin-bottom: 1em;
   line-height: 46px;
 }
 
-
 /* NOTICIAS */
-.noticias{
+.noticias {
   margin: 1em 5%;
-  margin-bottom:3em;
-  display:grid;
+  margin-bottom: 3em;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap:2em 2%;
+  gap: 2em 2%;
 }
 /*adaptar noticias-------------------------------------*/
-@media screen and (max-width:1070px){
-  .noticias{
-
+@media screen and (max-width: 1070px) {
+  .noticias {
     grid-template-columns: 1fr 1fr;
-
   }
-} 
-@media screen and (max-width:650px){
-  .noticias{
-
+}
+@media screen and (max-width: 650px) {
+  .noticias {
     grid-template-columns: 1fr;
-
   }
-} 
+}
 /*---------------------------------------------------*/
-.noticia{
+.noticia {
   margin: 0;
   grid-template-rows: 15em auto;
   height: auto;
   grid-template-columns: 1fr;
-  display:grid;
+  display: grid;
   text-decoration: none;
-  color:#313131;
+  color: #313131;
   border: 1px solid #0005;
   border-radius: 1em;
 }
-.noticia:hover{
+.noticia:hover {
   background: #eeedf2;
   border: 1px solid #eeedf2;
 }
-.text{
-  padding:1em 2em 3em 2em;
+.text {
+  padding: 1em 2em 3em 2em;
   border-bottom-right-radius: 1em;
   border-bottom-left-radius: 1em;
   border-top: 0;
 }
-.writer{
-  color:#555;
+.writer {
+  color: #555;
   font-size: 11pt;
   font-weight: 400;
   line-height: 15.95pt;
 }
-.date{  
-  color:#555;
+.date {
+  color: #555;
   font-size: 10pt;
   font-weight: 300;
   line-height: 14.5pt;
-
 }
-.title{
+.title {
   margin: 0.5em 0;
   font-weight: 600;
   font-size: 19pt;
   line-height: 33pt;
-
 }
 .title mark {
   background: var(--verde);
@@ -319,14 +300,14 @@ transition: transform 1s 0.1s ease-in-out, opacity 1s 0.1s ease-in-out;
   color: #fff;
   padding: 0.1em 0em;
 }
-.parraf{
-  color:#434343;
+.parraf {
+  color: #434343;
   font-size: 12pt;
   font-weight: 400;
   line-height: 17.4pt;
 }
 
-.image{
+.image {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -334,149 +315,169 @@ transition: transform 1s 0.1s ease-in-out, opacity 1s 0.1s ease-in-out;
   border-top-left-radius: 1em;
 }
 
-
 /* noticias imagenes */
-.image1{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/donaciones1.jpg);
+.image1 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/donaciones1.jpg);
 }
-.image2{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/reciclaressolo\ \(1\).jpg);
+.image2 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/reciclaressolo\\(1\).jpg);
 }
-.image3{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/gobernanza2.jpg);
+.image3 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/gobernanza2.jpg);
 }
-.image4{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/fundacionverde.jpg?30072021);
+.image4 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/fundacionverde.jpg?30072021);
 }
-.image5{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/plastico-aliado-o-enemigo.jpg);
+.image5 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/plastico-aliado-o-enemigo.jpg);
 }
-.image6{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/gobernanza1.jpg);
+.image6 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/gobernanza1.jpg);
 }
-.image7{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/incendios.jpg);
+.image7 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/incendios.jpg);
 }
-.image8{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/cooperativarecicord2.jpg);
+.image8 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/cooperativarecicord2.jpg);
 }
-.image9{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/COP.jpeg);
+.image9 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/COP.jpeg);
 }
-.image10{
+.image10 {
   background-image: linear-gradient(#3336, #3336), url(img/capacitaciones.jpg);
-
 }
-.image11{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/diareciclaje.jpg);
-
+.image11 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/diareciclaje.jpg);
 }
-.image12{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/cumbre1.jpg);
-
+.image12 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/cumbre1.jpg);
 }
-.image13{
-  background-image: linear-gradient(#3336, #3336), url(img/empresasconscientes.jpeg);
-
+.image13 {
+  background-image: linear-gradient(#3336, #3336),
+    url(img/empresasconscientes.jpeg);
 }
-.image14{
-  background-image: linear-gradient(#3336, #3336), url(img/cooperativaloscuadraditos.jpg);
-
+.image14 {
+  background-image: linear-gradient(#3336, #3336),
+    url(img/cooperativaloscuadraditos.jpg);
 }
-.image15{
+.image15 {
   background-image: linear-gradient(#3332, #3332), url(iblog/logoeconews.jpg); /*es diferente*/
-
 }
-.image16{
+.image16 {
   background-image: linear-gradient(#3336, #3336), url(iblog/sosmundo.jpg);
-
 }
-.image17{
+.image17 {
   background-image: linear-gradient(#3336, #3336), url(iblog/cierreuno.jpg);
-
 }
-.image18{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/puntoecosquin.jpg);
-
+.image18 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/puntoecosquin.jpg);
 }
-.image19{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/ecolinkaulasafuera.jpg);
-
+.image19 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/ecolinkaulasafuera.jpg);
 }
-.image20{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/aulaguia.jpg);
-
+.image20 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/aulaguia.jpg);
 }
-.image21{
+.image21 {
   background-image: linear-gradient(#3336, #3336), url(iblog/IARSE.jpeg);
-
 }
-.image21{
+.image21 {
   background-image: linear-gradient(#3336, #3336), url(iblog/IARSE.jpeg);
-
 }
-.image22{
+.image22 {
   background-image: linear-gradient(#3336, #3336), url(nov/cesto.jpeg);
 }
-.image23{
+.image23 {
   background-image: linear-gradient(#3336, #3336), url(iblog/repensarext.jpg);
 }
-.image24{
+.image24 {
   background-image: linear-gradient(#3336, #3336), url(iblog/ebullicion.jpg);
 }
 
-.image25{
+.image25 {
   background-image: linear-gradient(#3336, #3336), url(iblog/cumbreuno.jpg);
 }
 
-.image26{
+.image26 {
   background-image: linear-gradient(#3336, #3336), url(iblog/aniversariouno.jpg);
 }
 
-.image27{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/econews/imagenecoblog/econews-eikonequipohorizontal.jpg);
+.image27 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/econews/imagenecoblog/econews-eikonequipohorizontal.jpg);
 }
 
-.image28{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/econews/imagenecoblog/econews-ecosquin2.jpg);
+.image28 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/econews/imagenecoblog/econews-ecosquin2.jpg);
 }
 
-.image29{
-  background-image: linear-gradient(#3336, #3336), url(img/compostajenovedad.jpg);
+.image29 {
+  background-image: linear-gradient(#3336, #3336),
+    url(img/compostajenovedad.jpg);
 }
-.image30{
-  background-image: linear-gradient(#3336, #3336), url(iblog/forestacionimagen\ \(6\).jpg);
+.image30 {
+  background-image: linear-gradient(#3336, #3336),
+    url(iblog/forestacionimagen\\(6\).jpg);
 }
-.image31{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/santamariapunilla2.jpg);
+.image31 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/santamariapunilla2.jpg);
 }
-.image32{
-  background-image: linear-gradient(#3336, #3336), url(iblog/riopinto\ \(4\).jpg);
+.image32 {
+  background-image: linear-gradient(#3336, #3336), url(iblog/riopinto\\(4\).jpg);
 }
-.image34{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/forestando.jpg);
+.image34 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/forestando.jpg);
 }
-.image35{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/nuevoservicio1.jpg);
+.image35 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/nuevoservicio1.jpg);
 }
-.image36{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/paul6.jpg);
+.image36 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/paul6.jpg);
 }
-.image37{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/campa2024-4.jpeg);
+.image37 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/campa2024-4.jpeg);
 }
-.image38{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/naranjaX-1v2.jpeg);
+.image38 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/naranjaX-1v2.jpeg);
 }
-.image39{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/nuevoservicio3.jpg);
+.image39 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/nuevoservicio3.jpg);
 }
-.image40{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/volunariadoportadaop1.jpg);
+.image40 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/volunariadoportadaop1.jpg);
 }
-.image41{
-  background-image: linear-gradient(#3336, #3336), url(https://ecolink.com.ar/iblog/ecosquin2025-portada.jpg);
+.image41 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/ecosquin2025-portada.jpg);
 }
+.image42 {
+  background-image: linear-gradient(#3336, #3336),
+    url(https://ecolink.com.ar/iblog/afterOffice.jpg);
+}
+
 /*Manifiesto de la fundación*/
 /* .noticia16{
   grid-template-columns: 0fr 2fr;
@@ -502,76 +503,62 @@ transition: transform 1s 0.1s ease-in-out, opacity 1s 0.1s ease-in-out;
   }
 } */
 
-
-
-
 /*REDES*/
 
-
-footer{
+footer {
   background: #eeedf2;
-
 }
 
-#tituloredes{
-  padding-top:1em;
+#tituloredes {
+  padding-top: 1em;
   display: flex;
   justify-content: center;
   font-weight: 500;
   font-size: 16pt;
 }
 
-.gridderedes{
-  display:flex;
+.gridderedes {
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin:1em;
+  margin: 1em;
   margin-bottom: 2em;
- /* opacity:0;
+  /* opacity:0;
   transform: translateY(10%);
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;*/
 }
 
-
-
-.redeslink img{
-  width:4em;
-  transition: transform 0.3s ease-in-out ;
-  margin:0 2em;
+.redeslink img {
+  width: 4em;
+  transition: transform 0.3s ease-in-out;
+  margin: 0 2em;
   border-radius: 50%;
 }
-.redeslink img:hover{
+.redeslink img:hover {
   transform: translateY(-15%);
 }
 
-
-.derechos{
-    font-weight: 300;
-    background-color: #d0ceda;
-    font-size: 10pt;
-    text-align: center;
-    padding: 1em;
+.derechos {
+  font-weight: 300;
+  background-color: #d0ceda;
+  font-size: 10pt;
+  text-align: center;
+  padding: 1em;
 }
-
 
 /* ADAPTAR REDES */
-@media screen and (max-width:650px){
-  .gridderedes{
-      flex-wrap: wrap;
-    }
-    .redeslink img{
-      margin-bottom: 0.5em;
-      width: 3.5em;
-    }
-
+@media screen and (max-width: 650px) {
+  .gridderedes {
+    flex-wrap: wrap;
+  }
+  .redeslink img {
+    margin-bottom: 0.5em;
+    width: 3.5em;
+  }
 }
 
-
-
-
-
 /*MOSTRAR*/
-.mostrar{
+.mostrar {
   opacity: 100%;
   display: block;
 }
